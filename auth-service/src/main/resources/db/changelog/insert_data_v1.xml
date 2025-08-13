@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2" author="kucher">
+        <insert tableName="users">
+            <column name="username" value="pivovarenik"/>
+            <!--121212-->
+            <column name="password" value="$2a$05$Af/4ANTmEMkGYJ0CLRlebe.pAlMON3QhXwEzKkSX3LU.xYny0A8Dm"/>
+            <column name="email" value="egorpivovarcik@gmail.com"/>
+            <column name="first_name" value="Егор"/>
+            <column name="last_name" value="Пивоварчик"/>
+            <column name="role" value="ADMIN"/>
+        </insert>
+        <insert tableName="users">
+            <column name="username" value="margarita1232"/>
+            <!--131313-->
+            <column name="password" value="$2a$05$Xq7Vt/IbgZl5U7RvfWsuyexiyn26PapG1PJz.O3aUpjhEIHXjG5LC"/>
+            <column name="email" value="elena.vladim81@mail.ru"/>
+            <column name="first_name" value="Маргарита"/>
+            <column name="last_name" value="Ливанова"/>
+            <column name="role" value="USER"/>
+        </insert>
+        <!--12345678 для всех записей ниже-->
+        <insert tableName="users">
+            <column name="username" value="user1"/>
+            <column name="password" value="$2a$10$ZqOhlOBwzbd6a6nVKzmreO6UeTVCYfLALVwME26nKCPYHqgRBKqaK"/>
+            <column name="email" value="user1@example.com"/>
+            <column name="first_name" value="Иван"/>
+            <column name="last_name" value="Иванов"/>
+            <column name="role" value="USER"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="username" value="user2"/>
+            <column name="password" value="$2a$10$MaYcJzpskpP/J2g4LZAZheAgySDkVdExo3yGp2T7Q0l6rKLaRS.ha"/>
+            <column name="email" value="user2@example.com"/>
+            <column name="first_name" value="Петр"/>
+            <column name="last_name" value="Петров"/>
+            <column name="role" value="USER"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="username" value="user3"/>
+            <column name="password" value="$2a$10$3cqxSLpZb1e0yx7AyCWMe.m/Xw54A5arOHFxQW8f6ov3GZKbbnYAm"/>
+            <column name="email" value="user3@example.com"/>
+            <column name="first_name" value="Алексей"/>
+            <column name="last_name" value="Смирнов"/>
+            <column name="role" value="USER"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="username" value="user4"/>
+            <column name="password" value="$2a$10$6NVMyTxfrkVijXKFLi3CluM1nRxciEtZsAczgdNObGR20k7d5dLNO"/>
+            <column name="email" value="user4@example.com"/>
+            <column name="first_name" value="Мария"/>
+            <column name="last_name" value="Кузнецова"/>
+            <column name="role" value="USER"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="username" value="user5"/>
+            <column name="password" value="$2a$10$2xGf1uUlPTedUv/Ixyq0e.9Hb0qqPIPQpku2esMkEd7KZIMGBL51a"/>
+            <column name="email" value="user5@example.com"/>
+            <column name="first_name" value="Светлана"/>
+            <column name="last_name" value="Николаева"/>
+            <column name="role" value="USER"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
