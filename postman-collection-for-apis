@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "e7223475-f133-452a-8d65-a7a36a116d77",
+		"name": "Query Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35070076"
+	},
+	"item": [
+		{
+			"name": "auth-service",
+			"item": [
+				{
+					"name": "SignUpRequest",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"oleg12\",\r\n    \"password\":\"909090\",\r\n    \"email\":\"oleg12@malibu.ru\",\r\n    \"firstName\":\"Артем\",\r\n    \"lastName\":\"Слонов\",\r\n    \"role\":\"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/signUp",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignInRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"oleg12\",\r\n    \"password\":\"909090\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/signIn",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaXZvdmFyZW5pazEyIiwicm9sZSI6IkFETUlOIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwiaWF0IjoxNzU1MDg1MDcwLCJleHAiOjE3NTUxNDUwNzB9.HpO2v-3OCjFRRYzlczj47c5dswbXeIYx293OLNH93xw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMyProfile",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUserById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaXZvdmFyZW5pazEyIiwicm9sZSI6IkFETUlOIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwiaWF0IjoxNzU1MDg3NzI3LCJleHAiOjE3NTUxNDc3Mjd9.i4gO7XvQG0mrkRsj2vuy1tmoM8peIbc3pL9YVzCwqoQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users/18",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaXZvdmFyZW5pazEyIiwicm9sZSI6IkFETUlOIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwiaWF0IjoxNzU1MDg4NjM5LCJleHAiOjE3NTUxNDg2Mzl9.Gz9ONnEhEzwXu3Aj2QCNzTZc4-IDCc8L1Ti-kL02CFs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"34\",\r\n    \"password\":\"34\",\r\n    \"email\":\"k211@malibu.ru\",\r\n    \"firstName\":\"Егор\",\r\n    \"lastName\":\"Пивоварчик\",\r\n    \"role\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/25",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "localhost:8080",
+			"type": "default"
+		}
+	]
+}
